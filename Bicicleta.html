@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reto 2</title>
+
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src= "js/funciones.js"></script>
+
+    </head>
+    <body>
+
+        <h1>REGISTRO</h1>
+        <input type="number"  id="miID"          placeholder="Id">
+        <input type="text"    id="miBRAND"       placeholder="Brand">
+        <input type="number"  id="miMODEL"       placeholder="Model">
+        <input type="number"  id="miCATEGORY_ID" placeholder="Categoory_ID">
+        <input type="text"    id="miNAME"        placeholder="Name">
+        <button onclick="insertarBI()">Insertar Bicicleta</button>
+
+        <div id='idDivConsulta'>
+
+        </div>
+
+
+
+        
+        <button onclick="consultarBI()">Mostrar Bicicletas</button>
+
+        <div id='idDivEdicion'>
+
+        </div>
+
+        <div style="display:none" id="userinformation">
+            <h3>Detalle de bicicleta</h3> 
+
+            <label>Id Bicicleta por actualizar</label> 
+            <input class="form-control" type="number"  id="infomiID" readonly>
+
+            <label>Brand</label>
+            <input class="form-control" type="text"    id="infomiBRAND"> <br> 
+
+            <label>Model</label>
+            <input class="form-control" type="number"  id="infomiMODEL">
+
+            <label>Category_ID</label>
+            <input class="form-control" type="number"  id="infomiCATEGORY_ID">
+
+            <label>Name</label>
+            <input class="form-control" type="text"    id="infomiNAME">
+
+            <button style="display:none" class="btn btn-primary"  id="botoninfo" onclick=actualizarBI() >Actualizar Bicicleta</button>
+
+        </div>    
+    </body>
+</html>
