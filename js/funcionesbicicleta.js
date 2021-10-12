@@ -118,7 +118,7 @@ function actualizarBI(){
 
             success      :  function(response){
                                 console.log(response);
-                                consultar();
+                                consultarBI();
                             },
             error       :   function(xhr,status){
                                 console.log( xhr);
