@@ -130,7 +130,14 @@ const eliminar = (id) => {
 };
 
 const llenarTabla = (items) => {
-  if (items.length === 0) return;
+  if (items.length === 0) {
+    document.getElementById("tbody").innerHTML = ` <tr>
+  <td>SIN DATOS</td>
+  <td>SIN DATOS</td>
+  <td>SIN DATOS</td>
+</tr>`;
+    return;
+  }
   const tbody = items.reduce((previo, actual) => {
     btnsActualizar[`btnActualizar${actual.id}`] = {
       id: actual.id,

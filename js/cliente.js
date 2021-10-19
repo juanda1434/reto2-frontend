@@ -120,7 +120,7 @@ const eliminar = (id) => {
     id: id,
   };
   fetch(
-    "https://g8d82331278aa84-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/client/client",
+    "https://g8d82331278aa84-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/client/client",
     {
       method: "DELETE",
       body: JSON.stringify(data),
@@ -146,7 +146,17 @@ const eliminar = (id) => {
 };
 
 const llenarTabla = (items) => {
-  if (items.length === 0) return;
+  if (items.length === 0) {
+    document.getElementById("tbody").innerHTML = ` 
+    <tr>
+    <td>SIN DATOS</td>
+    <td>SIN DATOS</td>
+    <td>SIN DATOS</td>
+    <td>SIN DATOS</td>
+    <td>SIN DATOS</td>
+  </tr>`;
+    return;
+  }
   const tbody = items.reduce((previo, actual) => {
     btnsActualizar[`btnActualizar${actual.id}`] = {
       id: actual.id,

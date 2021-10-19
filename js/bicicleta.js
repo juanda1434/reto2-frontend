@@ -26,7 +26,7 @@ const registrar = () => {
   };
 
   fetch(
-    "https://g8d82331278aa84-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/bike/bike",
+    "https://g8d82331278aa84-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/bike/bike",
     {
       method: "POST",
       body: JSON.stringify(data),
@@ -57,7 +57,7 @@ const listar = () => {
   btnsActualizar = {};
   btnsEliminar = {};
   fetch(
-    "https://g8d82331278aa84-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/bike/bike",
+    "https://g8d82331278aa84-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/bike/bike",
     {
       method: "GET",
       headers: {
@@ -103,7 +103,7 @@ const actualizar = () => {
     name: nombre,
   };
   fetch(
-    "https://g8d82331278aa84-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/bike/bike",
+    "https://g8d82331278aa84-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/bike/bike",
     {
       method: "PUT",
       body: JSON.stringify(data),
@@ -133,7 +133,7 @@ const eliminar = (id) => {
     id: id,
   };
   fetch(
-    "https://g8d82331278aa84-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/bike/bike",
+    "https://g8d82331278aa84-bdreto1.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/bike/bike",
     {
       method: "DELETE",
       body: JSON.stringify(data),
@@ -159,7 +159,18 @@ const eliminar = (id) => {
 };
 
 const llenarTabla = (items) => {
-  if (items.length === 0) return;
+  if (items.length === 0) {
+    document.getElementById("tbody").innerHTML = ` 
+    <tr>
+    <td>SIN DATOS</td>
+    <td>SIN DATOS</td>
+    <td>SIN DATOS</td>
+    <td>SIN DATOS</td>
+    <td>SIN DATOS</td>
+    <td>SIN DATOS</td>
+</tr>`;
+    return;
+  }
   const tbody = items.reduce((previo, actual) => {
     btnsActualizar[`btnActualizar${actual.id}`] = {
       id: actual.id,
@@ -176,6 +187,7 @@ const llenarTabla = (items) => {
       `<tr>
         <td>${actual.id}</td>
         <td>${actual.brand}</td>
+        <td>${actual.model}</td>
         <td>${actual.category_id}</td>
         <td>${actual.name}</td>
 
