@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmnls:th="http//www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cliente</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body class="mx-auto">
+	<br>
+	<div class="container">
+		<div class="container">
+			<h3>Cliente</h3>
+		</div>
+		<div class="container">
+			<form>
+
+				<div class="form-group">
+					<label class="col-form-label">Id</label>
+					<div>
+						<input type="text" id="id" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-form-label">Nombre</label>
+					<div>
+
+						<input type="text" id="nombre" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-form-label">Email</label>
+					<div>
+
+						<input type="email" id="email" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-form-label">Edad</label>
+					<div>
+
+						<input type="number" id="edad" class="form-control">
+					</div>
+				</div>
+
+				<br>
+				<div class="form-group">
+					<div>
+						<button type="button" id="btnEnviar" class="btn btn-primary">Registrar cliente</button>
+
+					</div>
+				</div>
+			</form><br>
+
+			<hr width=1095>
+			<div id="conttabla">
+				<h3>Clientes</h3><br>
+				<a class="btn btn-success" id="btnListar">Llenar tabla</a>
+				<table id="tablaid" class="table table-striped ">
+					<thead class="thead-inverse">
+						<tr>
+							<th>Id</th>
+							<th>Nombre</th>
+							<th>Email</th>
+							<th>Edad</th>
+							<th>Acciones</th>
+
+						</tr>
+					</thead>
+
+					<br>
+					<br>
+					<tbody id="tbody">
+						<tr>
+							<td>SIN DATOS</td>
+							<td>SIN DATOS</td>
+							<td>SIN DATOS</td>
+							<td>SIN DATOS</td>
+							<td>SIN DATOS</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+
+
+			<div id="userinformation">
+				<h3>Actualizar</h3>
+				<label>Id User</label>
+				<input class="form-control" type="number" id="idActualizar" disabled>
+				<br>
+
+				<label>Nombre</label>
+				<input class="form-control" type="text" id="nombreActualizar"> <br>
+
+				<label>Email</label>
+				<input class="form-control" type="email" id="emailActualizar"> <br>
+
+				<label>Edad</label>
+				<input class="form-control" type="number" id="edadActualizar"> <br>
+
+				<button class="btn btn-primary" id="btnActualizar">editar</button>
+
+
+
+			</div>
+
+		</div>
+	</div>
+	<footer class="mx-auto">
+		<br>
+		<br>
+		<br>
+
+	</footer>
+	<script src="js/cliente.js"></script>
+</body>
+
+
+</html>

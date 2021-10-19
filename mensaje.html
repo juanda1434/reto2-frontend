@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmnls:th="http//www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mensaje</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body class="mx-auto">
+    <br>
+    <div class="container">
+        <div class="container">
+            <h3>Formulario Mensajes</h3>
+        </div>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label class="col-form-label">Id</label>
+                    <div>
+                        <input type="text" id="id" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label">mensaje</label>
+                    <div>
+
+                        <input type="text" id="mensaje" class="form-control">
+                    </div>
+                </div>
+
+
+                <br>
+                <div class="form-group">
+                    <div>
+                        <button type="button" id="btnEnviar" class="btn btn-primary">Registrar mensaje</button>
+
+                    </div>
+                </div>
+            </form><br>
+
+            <hr width=1095>
+
+            <div>
+                <h3>Mensajes</h3><br>
+                <a class="btn btn-success" id="btnListar">Llenar tabla</a>
+
+                <table id="tablaid" class="table table-striped ">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>Id</th>
+                            <th>Mensaje</th>
+                            <th>Acciones</th>
+
+                        </tr>
+                    </thead>
+
+                    <br>
+                    <br>
+                    <tbody id="tbody">
+                        <tr>
+                            <td>SIN DATOS</td>
+                            <td>SIN DATOS</td>
+                            <td>SIN DATOS</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <hr class="my-5" width=1095>
+
+            <div id="userinformation">
+                <h3>Actualizar</h3>
+                <label>Id</label>
+                <input class="form-control " type="text" id="idActualizar" disabled>
+
+                <label>Message</label>
+                <input class="form-control" type="text" id="mensajeActualizar" disabled> <br>
+
+                <button class="btn btn-primary" id="btnActualizar" disabled>Editar</button>
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <footer class="mx-auto my-5">
+
+    </footer>
+
+    <script src="js/mensaje.js"></script>
+</body>
+
+
+</html>
